@@ -1,0 +1,10 @@
+<div *ngIf="hero">
+  <h2 data-cy="hero-h2-name">{{hero.name | uppercase}} Details</h2>
+  <div><span data-cy="hero-span-id">id: </span>{{hero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name" data-cy="heroDetail-input-name"/>
+  </div>
+  <button type="button" (click)="goBack()" data-cy="heroDetail-button-goBack">go back</button>
+  <button type="button" (click)="save()" data-cy="heroDetail-button-save">save</button>
+</div>
